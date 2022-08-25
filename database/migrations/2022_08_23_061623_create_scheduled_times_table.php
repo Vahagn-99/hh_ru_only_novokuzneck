@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Car;
 use App\Models\Employer;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -16,7 +17,8 @@ return new class extends Migration
   {
     Schema::create('scheduled_times', function (Blueprint $table) {
       $table->id();
-      $table->foreignIdFor(Employer::class)->constrained()->delete('cascade');
+      $table->foreignIdFor(Employer::class);
+      $table->foreignIdFor(Car::class);
       $table->date('start_date');
       $table->date('end_date');
       $table->timestamps();

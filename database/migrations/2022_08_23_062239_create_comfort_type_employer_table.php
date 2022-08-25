@@ -13,7 +13,7 @@ return new class extends Migration
    */
   public function up()
   {
-    Schema::create('employer_comfort', function (Blueprint $table) {
+    Schema::create('comfort_type_employer', function (Blueprint $table) {
       $table->id();
       $table->integer('comfort_type_id')->unsigned();
       $table->integer('employer_id')->unsigned();

@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
-});
+if (app()->environment('local'))
+  Route::post('avallable-cars', [App\Http\Controllers\Api\CarControler::class, 'avallableCars']);
+else
+  Route::middleware('auth')->post('avallable-cars', [App\Http\Controllers\Api\CarControler::class, 'avallableCars']);

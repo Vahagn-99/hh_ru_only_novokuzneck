@@ -15,7 +15,7 @@ return new class extends Migration
   {
     Schema::create('comfort_types', function (Blueprint $table) {
       $table->id();
-      $table->string('types')->comment('its taking  from enum App\Enums\ComfortTyes');
+      $table->string('type')->comment('its taking  from enum App\Enums\ComfortTyes');
       $table->timestamps();
     });
   }

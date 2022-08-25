@@ -2,24 +2,29 @@
 
 namespace App\Models;
 
+use App\Enums\ComfortTypes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+use Laravel\Scout\Searchable;
 
 class ComfortType extends Model
 {
   use HasFactory;
-
+  use Searchable;
   /**
    * The attributes that should be cast.
    *
-   * @var array<string, string>
+   * @var array
    */
   protected $casts = [
-    'types' => App\Enums\ComfortTyes::class,
+    'type' => ComfortTypes::class,
   ];
+
+  protected $fillable = ['type'];
 
   public function employers()
   {
-    return $this->belongsToMany(Employer::class);
+    return $this->belongsToMany(Employer::class, 'comfort_type_employer');
   }
 }
