@@ -1,3 +1,6 @@
+
+# Managing Cars
+
 A brief description of what this project does and who it's for
 
 # How to start project
@@ -8,8 +11,6 @@ A brief description of what this project does and who it's for
 - 4. php artisan migrate --seed
 
 #
-
-#$ User authorization is not required
 
 ## Api methods
 
@@ -22,3 +23,5 @@ A brief description of what this project does and who it's for
  - startDate (travel start time)
  - endDate (travel end time)
  - search  (fi need filter by car model and comfort type)
+
+### User authorization is not required
