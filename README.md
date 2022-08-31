@@ -16,7 +16,8 @@ How to start project
 
 Api methods
 -
-POST method       {myhost}/api/avallable-cars Api\CarControler@avallableCars
+POST method       {myhost}/api/avallable-cars         
+                 Action Api\CarControler@avallableCars
 
 body
  id - user id (nullable)
